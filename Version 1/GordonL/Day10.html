@@ -25,49 +25,94 @@
                 flex: 1;
                 min-height: 10vh;
             }
+
+            h1{
+                text-align: center;
+            }
+
             li{
                 list-style: none;
             }
+
+            ul{
+                list-style: none;
+                padding-left: 0px;
+                text-align: center;
+            }
+            #contentContainer{
+                display: flex;
+            }
+
             a{
                 color:white
             }
-            img {
-        width:100px;
-        height:67px;
+
+            .sideBar:hover{
+                background: grey;
+            }
+
+            aside{
+                flex: 1;
+            }
+            .sideBar{
+                font-size: 24px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            #Thermo {
+        width:300px;
+        height:400px;
         float:right;
+        }
+        div {
+        overflow:hidden;
+        }
+        #Beans {
+        width:300px;
+        height:300;
+        float:left;
         }
         div {
         overflow:hidden;
         }
         </style>
     </head>
+        
 
     <body>
         <header>
             <h1>Latin Nonsense</h1>
             <nav>
-                <ul>
-                    <li> <a href="https://RandomLink.com">Click Me!</a></li>
-                    <li> <a href="https://theuselessweb.com/">No Click Me!</a></li>
-
-                </ul>
+        
             </nav>
+
+            <div id="contentcontainer">
+                <aside>
+                    <ul>
+                        <li class="sideBar"> <a href="https://RandomLink.com">Click Me!</a></li>
+                        <li class="sideBar"> <a href="https://theuselessweb.com/">No Click Me!</a></li>
+                    </ul>
+                </aside>
+            </div>
         </header>
 
        <main>
-        <img src="Thermostat.webp">
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed malesuada augue. Nam pretium non odio et accumsan. Vestibulum dignissim arcu massa. Vivamus sed feugiat libero. Donec ut justo tortor. Duis vitae tincidunt ligula. Morbi porta fermentum ligula, nec euismod urna congue cursus. Ut id scelerisque eros, nec dictum eros. Suspendisse accumsan venenatis ultricies. In molestie neque nec nibh semper aliquam. Morbi condimentum mi in accumsan cursus. Etiam gravida volutpat sem, eu lacinia nulla facilisis ut. Vivamus vestibulum eros orci, et fringilla justo tincidunt in. Donec ut dictum lectus. Nullam euismod neque sed lorem auctor, vitae aliquet justo pharetra. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
 
         <p>Cras ultrices, nisi ut consequat venenatis, nibh mauris dignissim ex, quis varius orci justo a mauris. Maecenas id dolor fringilla, dignissim nisi at, feugiat dui. Sed nec lacus tortor. Nam dignissim erat orci, id ultricies neque semper a. Morbi fringilla nec metus vel dapibus. In et pretium lectus. Sed sollicitudin ut ligula nec tempor. Curabitur elementum ante maximus ligula malesuada, ut ultricies mauris accumsan. Integer porttitor purus id lectus congue, bibendum posuere ex semper. Donec posuere ex a nisi porttitor, sit amet fringilla nisi sagittis. Cras odio ipsum, interdum at justo nec, elementum dictum est. Nunc lacus arcu, pellentesque vitae laoreet quis, pulvinar id sem.</p>
+
+        <img src="Thermostat.webp" id="Thermo">
         
+
         <p>Nulla volutpat facilisis diam, quis finibus eros condimentum ut. Maecenas bibendum massa velit, vel sodales est venenatis id. Donec non ante elit. Sed cursus eleifend felis ut rhoncus. Phasellus vel consequat erat, eu pellentesque felis. Aliquam tristique consequat nunc, eget dapibus diam feugiat sed. Mauris venenatis maximus mauris, in tincidunt metus dictum id. Aliquam erat volutpat. Nunc ornare consectetur molestie. Nullam ut gravida erat, et malesuada nisl. Donec rutrum malesuada nisi, ac ultricies purus tincidunt eget. Quisque tristique arcu finibus nunc faucibus, et venenatis massa convallis. Praesent ultrices imperdiet ligula, id convallis metus feugiat non. Suspendisse ultrices neque at dui aliquet accumsan. Pellentesque pharetra placerat mauris ac euismod.</p>
         
         <p>Donec eu placerat est. Vestibulum bibendum arcu eu nisl rutrum, at interdum sapien molestie. Sed id semper purus, vel pulvinar elit. Integer pellentesque erat ut est varius, dictum aliquet mi pulvinar. Integer luctus, libero at vehicula consectetur, lorem leo convallis neque, nec ultrices nulla turpis vitae nisl. Nunc placerat mauris ut libero fermentum suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque semper finibus tortor, ac rhoncus magna vehicula a. Nulla a malesuada tellus. Curabitur neque est, luctus eget tortor sit amet, ultrices fringilla neque. Proin accumsan neque tortor, fringilla sagittis nulla luctus nec. Nam nec cursus justo. Proin mollis et nunc eu fermentum. Praesent nec leo rhoncus, imperdiet velit quis, posuere lectus. Curabitur tortor mi, venenatis vitae consectetur non, efficitur porta augue.</p>
         
         <p>Phasellus a urna in urna interdum venenatis vitae vel nulla. Aliquam vehicula ullamcorper commodo. Duis ut ipsum lectus. Morbi pulvinar sed orci ornare fringilla. Etiam sagittis tellus non orci sagittis porttitor. Nullam rutrum suscipit turpis, elementum facilisis sem faucibus id. In porttitor orci in velit interdum sodales. Nunc dignissim felis vel diam molestie, eget cursus ligula dapibus. Integer congue varius tincidunt. Cras ultricies ante sit amet ultrices consequat. Duis vel nunc placerat, tincidunt mi eget, venenatis turpis.</p>
         
-        
+        <img src="unnamed-2.png" id="Beans">
+
         <p>Etiam fringilla non lorem nec iaculis. Maecenas imperdiet ultricies odio in consequat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed a viverra nisl. Suspendisse ultrices magna id lectus placerat dapibus. Aliquam id dignissim orci, et auctor lacus. Fusce ac quam in velit ornare cursus. Nam id semper sem.</p>
         
         <p>Donec non ultrices tellus. Donec ultrices sed dolor quis imperdiet. In hac habitasse platea dictumst. Sed et sapien eu nulla interdum pellentesque. In sed lobortis lacus. Vivamus nec tincidunt sem. Cras nec condimentum lorem, at blandit dolor. Suspendisse vel nibh sed ligula vehicula mattis. Aliquam quam libero, sagittis rhoncus efficitur accumsan, interdum at lorem. Maecenas et maximus justo. Nunc tincidunt fringilla massa. Integer varius sem odio, et tristique nibh suscipit in. Donec id tincidunt elit. Proin finibus ipsum vitae ante suscipit, non posuere lacus consequat.</p>
