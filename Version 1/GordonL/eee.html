@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function addNums(){
+                
+                const sumOne = Number(document.getElementById("addOne").value);
+                const sumTwo = Number(document.getElementById("addTwo").value);
+                document.write(sumOne+sumTwo);
+            }
+        </script>
+    </head>
+
+    <body>
+        <main>
+            <input id="addOne" type="text" />
+            +
+            <input id="addTwo" type="text" />
+            <input id="sumButton" onclick ="addNums()" type="button" value="Add" />
+        </main>
+    </body>
+</html>
