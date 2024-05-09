@@ -2,17 +2,30 @@
 <html>
     <head>
 
-        <script>
-            function greetMsg(){
-                alert("Hello World");
-            }
-        </script>
+            <script>
+                function oneMsg(){
+                    alert("One");
+                }
+                function twoMsg(){
+                    alert("Two");
+                    alert("Two");
+                }
+                function threeMsg(){
+                    alert("Three");
+                    alert("Three");
+                    alert("Three");
+                }
+
+            </script>
 
     </head>
 
     <body>
         <main>
-            <input on click="greetMsg()" type="button" value="greet"/>
+            <input onclick="oneMsg()" type="button" value="One"/>
+            <input onclick="twoMsg()" type="button" value="Two"/>
+            <input onclick="threeMsg()" type="button" value="Three"/>
         </main>
     </body>
+
 </html>
