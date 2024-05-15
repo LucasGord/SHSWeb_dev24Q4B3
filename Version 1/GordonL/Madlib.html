@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function addNums(){
+                
+                const wordOne = document.getElementById("noun").value;
+                const wordTwo = document.getElementById("adjective").value;
+                const wordThree = document.getElementById("verb").value;
+                
+                document.getElementById("sumOutput").innerHTML += wordOne+ wordTwo + wordThree;
+            }
+        </script>
+    </head>
+
+    <body>
+        <main>
+            <p>Noun:<input id="noun" type="text"/></p>
+            <p>Adjective:<input id="adjective" type="text"/></p>
+            <p>Verb:<input id="verb" type="text"/></p>
+            <input id="sumButton" onclick ="addNums()" type="button" value="Add" />
+
+            <div id="sumOutput">These are my output words:</div>
+            </p>
+        </main>
+    </body>
+</html>

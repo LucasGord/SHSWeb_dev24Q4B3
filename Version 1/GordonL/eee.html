@@ -8,6 +8,19 @@
                 const sumTwo = Number(document.getElementById("addTwo").value);
                 document.write(sumOne+sumTwo);
             }
+            function multiNums(){
+                const mulOne = Number(document.getElementById("triOne").value);
+                const mulTwo = Number(document.getElementById("triTwo").value);
+                document.write(mulOne*mulTwo);
+            }
+            function pythag(){
+                const a = Number(document.getElementById("aVal").value);
+                const b = Number(document.getElementById("bVal").value);
+                const c = Math
+                document.getElementById("aOut").innerHTML = a;
+                document.getElementById("bOut").innerHTML = b;
+                document.getElementById("cOut").innerHTML = c;
+            }
         </script>
     </head>
 
@@ -17,6 +30,21 @@
             +
             <input id="addTwo" type="text" />
             <input id="sumButton" onclick ="addNums()" type="button" value="Add" />
+            <br>
+            <br>
+            <input id="triOne" type="text" />
+            +
+            <input id="triTwo" type="text" />
+            <input id="multiButton" onclick ="multiNums()" type="button" value="Multiply" />
+            <br>
+            <br>
+            <p>Pythagorean Theorem</p>
+            <input id="aVal" type="text" /> <br>
+            <input id="bVal" type="text" /> <br>
+            <input onlick="pythag()"type="button" value="Find C"/>
+            <p>If the legs of a right triangle measure
+                <span id="aOut"></span> and <span id="bOut"></span> then the hypotenuse measures <span id="cOut"></span>.
+            
         </main>
     </body>
 </html>
