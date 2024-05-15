@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            main{
+                text-align: center;
+            }
+            body{
+                background-color: black;
+            }
+            h1{
+                color: white;
+            }
+            p{
+                color: white;
+            }
+        </style>
+        <script>
+            let randNum = Math.floor(Math.random()*100)+1;
+            function checkGuess(){
+                let userIn = document.getElementById("myAnswer").value="";
+                if (userIn > randNum)
+                {alert("Lower");}
+                else alert("Higher")
+                if (userIn == randNum) alert("Success")
+            }
+        </script>
+    </head>
+    <body>
+        <main>
+            <h1> Higher or Lower</h1>
+            <p>Guess a number between 1 and 100</p>
+            <input id="myAnswer" type="text"  />
+            <input onclick="checkGuess()" type ="button" value="Submit" />
+        </main>
+    </body>
+</html>
