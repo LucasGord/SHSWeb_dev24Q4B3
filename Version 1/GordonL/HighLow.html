@@ -18,11 +18,12 @@
         <script>
             let randNum = Math.floor(Math.random()*100)+1;
             function checkGuess(){
-                let userIn = document.getElementById("myAnswer").value="";
+                let userIn = document.getElementById("myAnswer").value;
                 if (userIn > randNum)
                 {alert("Lower");}
                 else alert("Higher")
                 if (userIn == randNum) alert("Success")
+                let userOut = document.getElementById("myAnswer").value="";
             }
         </script>
     </head>
