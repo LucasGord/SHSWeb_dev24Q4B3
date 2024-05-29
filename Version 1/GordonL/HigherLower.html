@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            background-color:black;
+            color:white;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .higher{
+            color:red;
+        }
+
+        .lower{
+            color:teal;
+        }
+
+        .success{
+            color: green;
+        }
+    </style>
+
+
+    <script>
+        let answer = Math.floor(Math.random()*100)+1;
+
+        function checkGuess(){
+            const guess = Number(document.getElementById("guess").value);
+            const result = document.getElementById("result");
+            const prevGuesses = document.getElementById("prevGuesses");
+            let state;
+
+            if (firstGuess){
+                prevGuesses.innerHTML = "Previous Guesses: "
+                firstGuess = false;
+            } else {
+                prevGuesses.innerHTML += ", ";
+
+            }
+
+
+
+            if (guess > answer){
+                result.innerHTML = "<h3>Your guess of <span class='higher'>" + guess + "</span> higher than the actual number.</h3>";
+                    state="higher"
+            } else if (guess < answer){
+                result.innerHTML = "<h3>Your guess of <span class='lower'>" + guess + "</span> lower than the actual number.</h3>";
+                    state="lower";
+            } else {
+                result.innerHTML = "<h3><span class='success'>Your guess is correct!</span></h3>";
+                    state="sucess";
+            }
+                previousGuesses.innerHTML += "<span class ='" + state + "'>" + guess + "</span>";
+
+                document.getElementsById("guess").value = "";
+            
+        }
+    </script>
+    
+</head>
+<body>
+    <main>
+        <h1>Higher or Lower</h1>
+        Guess a number from 1 to 100. <br>
+        <input id="guess" type="text"/>
+        <input onclick="checkGuess()" type="button" value="Submit"/>
+        <div id="result"></div>
+    </main>
+    
+</body>
