@@ -24,7 +24,8 @@
 
     <script>
         let answer = Math.floor(Math.random()*100)+1;
-
+        let firstGuess = true;
+        alert(answer)
         function checkGuess(){
             const guess = Number(document.getElementById("guess").value);
             const result = document.getElementById("result");
@@ -32,29 +33,34 @@
             let state;
 
             if (firstGuess){
-                prevGuesses.innerHTML = "Previous Guesses: "
+                
+                prevGuesses.innerHTML = "Previous Guesses: ";
                 firstGuess = false;
             } else {
                 prevGuesses.innerHTML += ", ";
 
             }
 
-
-
             if (guess > answer){
-                result.innerHTML = "<h3>Your guess of <span class='higher'>" + guess + "</span> higher than the actual number.</h3>";
-                    state="higher"
+                result.innerHTML = "<h3>Your guess of <span class='higher'>" + guess + "</span> is higher than the actual number.</h3>";
+                    state="higher";
             } else if (guess < answer){
-                result.innerHTML = "<h3>Your guess of <span class='lower'>" + guess + "</span> lower than the actual number.</h3>";
+                result.innerHTML = "<h3>Your guess of <span class='lower'>" + guess + "</span> is lower than the actual number.</h3>";
                     state="lower";
             } else {
                 result.innerHTML = "<h3><span class='success'>Your guess is correct!</span></h3>";
-                    state="sucess";
+                    state="success";
             }
-                previousGuesses.innerHTML += "<span class ='" + state + "'>" + guess + "</span>";
+                prevGuesses.innerHTML += "<span class ='" + state + "'>" + guess + "</span>";
 
                 document.getElementsById("guess").value = "";
             
+        }
+
+        function resetButton(){
+            document.getElementById("result").innerHTML = "";
+            document.getElementById("prevGuesses").innerHTML = "";
+            answer = Math.floor(Math.random()*100)+1;
         }
     </script>
     
@@ -65,7 +71,10 @@
         Guess a number from 1 to 100. <br>
         <input id="guess" type="text"/>
         <input onclick="checkGuess()" type="button" value="Submit"/>
+        <input onclick="resetButton()" type ="button" value="Reset"/>
         <div id="result"></div>
+        <div id="prevGuesses"></div>
+        <div id="badInput"></div>
     </main>
     
 </body>
