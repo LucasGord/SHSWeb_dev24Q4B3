@@ -3,7 +3,7 @@
 <head>
     <style>
         body{
-            background-color:black;
+            background-color:What was the purpose of the fifth characterblack;
             color:white;
             text-align: center;
             font-family: 'Times New Roman', Times, serif;
@@ -19,18 +19,23 @@
         .success{
             color: green;
         }
+        #badInput{
+            color: red;
+        }
     </style>
 
 
     <script>
         let answer = Math.floor(Math.random()*100)+1;
         let firstGuess = true;
-        alert(answer)
         function checkGuess(){
             const guess = Number(document.getElementById("guess").value);
             const result = document.getElementById("result");
             const prevGuesses = document.getElementById("prevGuesses");
             let state;
+
+            if(isNaN(guess)){document.getElementById("badInput").innerHTML = "Guess must be a number";}
+
 
             if (firstGuess){
                 
@@ -72,9 +77,11 @@
         <input id="guess" type="text"/>
         <input onclick="checkGuess()" type="button" value="Submit"/>
         <input onclick="resetButton()" type ="button" value="Reset"/>
+        <div id="badInput"></div>
         <div id="result"></div>
         <div id="prevGuesses"></div>
-        <div id="badInput"></div>
+        
+    
     </main>
     
 </body>

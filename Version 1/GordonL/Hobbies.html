@@ -1,11 +1,61 @@
 <!DOCTYPE html>
 <html>
     <head>
+      <script>
+        function nameReveal(){
+          alert("The first one on the left is inspired by Minos Prime from Ultrakill and Tatara from Tokyo Ghoul")
+          alert("The second one is inspired by Eto Yoshimura from Tokyo Ghoul")
+          alert("The third one isn't inspired by a character but rather the design of creatures in Tokyo Ghoul")
+          alert("the fourth one follows the same concept as the third one but instead is something I made out of boredom")
+          alert("The fifth one was made to be in a D&D campagin, he was inspired by Tokyo Ghoul creatures")
+          alert("The sixth one is inspired by Eto Yoshimura from Tokyo Ghoul")
+          alert("Thank you for discovering the origins of these characters, and I hope you have learned something from this. Also feel free to browse the rest of these webpages and see if you can answer the questions they have")
+        }
+
+        function campaignName(){
+            var guess = document.getElementById("campaignInput").value.toLowerCase();
+          if (guess.includes("d&d campaign",)) {
+            document.getElementById("correctGuess").innerHTML = "Correct! This character was made to be in a D&D Campaign, he served his purpose and was extremely fun to make!"; 
+
+            document.getElementById("wrongGuess").innerHTML = ""; 
+          } else {
+            document.getElementById("wrongGuess").innerHTML = "Nope!";
+
+            document.getElementById("correctGuess").innerHTML = ""; 
+          }
+        }
+      </script>
       <title>
           Hobbies
       </title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
+
+
+          #correctGuess{
+            font-family: cursive;
+          }
+
+          #wrongGuess{
+            font-family: cursive;
+          }
+
+
+
+            h4{
+              font-family: cursive;
+            }
+
+            input{
+              font-family: cursive;
+              font-size: 15px;
+              text-align: center;
+              color: white;
+              border:groove;
+                width: auto;
+                height: auto;
+                background-color: #666e98;
+            }
 
             img{
             width:200px;
@@ -109,11 +159,17 @@
               <h1>Hello, and welcome to a collection of my hobbies! </h1>
               <p>One of my favorite hobbies I have is drawing, here are some things that I've made</p>
               <img src="Images/Minos.webp"><img src="Images/Eto.webp"><img src="Images/LongJohn.webp"><img src="Images/Skinny.webp"><img src="Images/Spooder.webp"><img src="Images/BlueCheese.webp">
+              <br>
+              <input onclick="nameReveal()" type="button" value="Click me to discover who each of these are based off of!"/>
+              <br>
+              <h4>What was the purpose of the fifth character?</h4><input id="campaignInput" type="text"/><input onclick="campaignName()" type="button" value="Submit"/>
+              <div id="correctGuess"></div>
+              <div id="wrongGuess"></div>
               <p>Another hobby of mine is going to the gym 2-3 times a week, Working both legs and upper body</p>
               <p>I also love playing games with friends during my free time, you can find games I like to play on the Favorite Games page</p>
 
             </main>
-            <footer> Lucas Gordon, Shakopee High School, 5/2/24,</footer>
+            <footer> Lucas Gordon, Shakopee High School, 6/3/24,</footer>
 
         </body>
 

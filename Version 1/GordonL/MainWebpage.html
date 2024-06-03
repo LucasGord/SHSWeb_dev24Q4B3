@@ -1,14 +1,57 @@
 <!DOCTYPE html>
 <html>
     <head>
+      <script>
+          function numberCheck(){
+            var guess = document.getElementById("numberGuess").value.toLowerCase();
+          if (guess.includes("seven")) {
+            document.getElementById("rightGuess").innerHTML = "Correct! I live with seven pets and each of them can sometimes be a hassle to deal with!"; 
+
+            document.getElementById("wrongGuess").innerHTML = ""; 
+          } else {
+            document.getElementById("wrongGuess").innerHTML = "Try again!";
+
+            document.getElementById("rightGuess").innerHTML = ""; 
+          }
+        }
+          
+      </script>
+
       <title>
           About me
       </title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
             
+
+            input{
+              font-family: cursive;
+              font-size: 15px;
+              text-align: center;
+              color: white;
+              border:groove;
+                width: auto;
+                height: auto;
+                background-color: #666e98;
+            }
+
+
+
+            #rightGuess{
+              font-family: cursive;
+            }
+
+            #wrongGuess{
+              font-family: cursive;
+            }
+
+
             #sweet{
             float:left;
+            }
+
+            h4{
+              font-family: cursive;
             }
 
             body{
@@ -104,12 +147,15 @@
           
             <main>
               <h1>Hello, my name is Lucas Gordon and I am a Sophomore at Shakopee High School and welcome to this site I have built as part of a project in Web Development. </h1>
-              <p><img src="Images/Cat.png" id="sweet">I am from California and now live here in Shakopee ever since I was a little kid. I have 2 siblings a brother and a sister, both younger than me, and I have two loving parents. I have a large family that I always have a feast with during holidays like thanksgiving and christmas and love spending time with. I also have 3 cats, 2 dogs, and 2 guinea pigs as pets in my home, a lot I know!</p>
+              <p><img src="Images/Cat.png" id="sweet">I am from California and now live here in Shakopee ever since I was a little kid. I have 2 siblings a brother and a sister, both younger than me, and I have two loving parents. I have a large family that I always have a feast with during holidays like thanksgiving and christmas and love spending time with. I also have 3 cats, 2 dogs, and 2 guinea pigs as pets in my home, a lot I know!
+              </p>
+              <h4>How many pets do I own?</h4><input id="numberGuess" type="text"/><input onclick="numberCheck()" type="button" value="Submit"/>
+              <div id="rightGuess"></div>
+              <div id="wrongGuess"></div>
               <p> Anyways I hope you have fun exploring this site by going to the Favorite Games and Hobbies page, and I hope you will be able to find fun little secrets inside of them! These pages will be updated more and more throughout the year as I learn more stuff in Web Development, so expect more pages and more secrets in the not so distant future.</p>
 
             </main>
-            <footer> Lucas Gordon, Shakopee High School, 5/2/24,</footer>
-
+            <footer> Lucas Gordon, Shakopee High School, 6/3/24,</footer>
         </body>
 
 </html>
