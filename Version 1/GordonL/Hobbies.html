@@ -10,20 +10,39 @@
           alert("The fifth one was made to be in a D&D campagin, he was inspired by Tokyo Ghoul creatures")
           alert("The sixth one is inspired by Eto Yoshimura from Tokyo Ghoul")
           alert("Thank you for discovering the origins of these characters, and I hope you have learned something from this. Also feel free to browse the rest of these webpages and see if you can answer the questions they have")
+          // This function will tell the viewer what the inspiration for each of these characters are
+          // It simply uses alerts to give information
         }
 
         function campaignName(){
             var guess = document.getElementById("campaignInput").value.toLowerCase();
-          if (guess.includes("d&d campaign",)) {
+          if (guess.includes("d&d campaign")) {
             document.getElementById("correctGuess").innerHTML = "Correct! This character was made to be in a D&D Campaign, he served his purpose and was extremely fun to make!"; 
 
             document.getElementById("wrongGuess").innerHTML = ""; 
           } else {
-            document.getElementById("wrongGuess").innerHTML = "Nope!";
+            document.getElementById("wrongGuess").innerHTML = "Nope!"; //
 
             document.getElementById("correctGuess").innerHTML = ""; 
+            // This function serves its purpose by getting the users input "campaigninput"
+            // It will then proceed to run code like if(guess.includes("d&d campaign")) to check if it contains "d&d dampaign" but the viewer can also put in "D&D Campaign"
+            // This is due to the toLowerCase() serving its use and making the code
+            // Recieve it as all lowercase so no matter how they use capitalization when entering the phrase "d&d campaign" it will always accept the right answer due
           }
         }
+        function randomWorkout()
+            {
+              var things = ['Pull-Ups', 'Abdominal Crunches', 'Planks'];
+              var thing = things[Math.floor(Math.random()*things.length)];
+              alert('A workout you should try is ' + thing);
+
+            }
+            // Once the button to do the function "randomWorkout()" is pressed
+            // it will run the code above and choose a random workout that will then be alerted to the viewer
+            // This functiom uses the math thing to generate a random number that corresponds to each of the 3 variables
+            // This number picked then signals the code this is the one to be displayed which is then combined with "A workout you should try is "
+            // This is one of the functions that were not made by me, I have simply modified something I have found online
+
       </script>
       <title>
           Hobbies
@@ -31,6 +50,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
 
+          button{
+            font-family: cursive;
+              font-size: 15px;
+              text-align: center;
+              color: white;
+              border:groove;
+                width: auto;
+                height: auto;
+                background-color: #666e98;
+          }
 
           #correctGuess{
             font-family: cursive;
@@ -166,6 +195,7 @@
               <div id="correctGuess"></div>
               <div id="wrongGuess"></div>
               <p>Another hobby of mine is going to the gym 2-3 times a week, Working both legs and upper body</p>
+              <button type="button" onclick="randomWorkout()"> Click me for a random workout</button>
               <p>I also love playing games with friends during my free time, you can find games I like to play on the Favorite Games page</p>
 
             </main>

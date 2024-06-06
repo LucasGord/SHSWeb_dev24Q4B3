@@ -3,7 +3,7 @@
     <head>
       <script>
           function numberCheck(){
-            var guess = document.getElementById("numberGuess").value.toLowerCase();
+            var guess = document.getElementById("numberGuess").value.toLowerCase(); //.tolowercase will serve to make it so when the device recieves it, it wont be able look for it to be specifically uppercase
           if (guess.includes("seven")) {
             document.getElementById("rightGuess").innerHTML = "Correct! I live with seven pets and each of them can sometimes be a hassle to deal with!"; 
 
@@ -14,6 +14,10 @@
             document.getElementById("rightGuess").innerHTML = ""; 
           }
         }
+      // This Operates by recieving the users input "numberGuess"
+      // Then will proceed to check if the "numberGuess" contains the phrase "seven"
+      // If it does then it will proceed to display the "rightGuess" and remove any previous wrong guess messages
+      // If it doesn't then it will go on to display the "wrongGuess" and remove any previous correct guess messages
           
       </script>
 

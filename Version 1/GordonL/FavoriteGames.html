@@ -14,11 +14,17 @@
         }
 
       // This Operates by recieving the users input "isaacGuess"
-      // Then will proceed to check if it contains the phrase "The Binding of Isaac: Rebirth"
-      // If it does then it will proceed to display the "rightGuess" and remove any previous wrong guess message
-      // If it doesn't then it will go on to display the "wrongGuess" and remove any previous correct guess message
+      // Then will proceed to check if the "isaacGuess" contains the phrase "The Binding of Isaac: Rebirth" by running if(guess.includes("d&d campaign"))
+      // I have not used .toLowerCase() here due to this being a game title meaning it should be case sensitive
+      // If it does then it will proceed to display the "rightGuess" and remove any previous wrong guess messages
+      // If it doesn't then it will go on to display the "wrongGuess" and remove any previous correct guess messages
       // Also yes this was created by me, I can see the big similarites to other examples of functions with this purpose
-  
+      // This script will be used often throughout these webpages due to them being a fun way for viewers to see if they have learned anything
+        function oofAlert(){
+          alert("Oof!")
+          alert("Nice job finding one of my secrets on these pages, go around and see if you can find others!")
+          //If the user presses the Roblox word on this page then it will display an alert with "Oof!" and the description of why its here
+        }
 
       </script>
       <title>
@@ -158,7 +164,7 @@
             </header>
           
             <main>
-              <h1>Hello and welcome to a list of my favorite games! </h1>
+              <h1>Hello, and welcome to a list of my favorite games! </h1>
             <div>
               <list>
                 <ol>
@@ -177,7 +183,7 @@
                     <br>
                     <br>
                     <br>
-                    <li> Roblox <img src="Images/RobloxLogo.webp"></li>
+                    <li><input onclick="oofAlert()" type="button" value="Roblox"/><img src="Images/RobloxLogo.webp"></li>
                 </ol>
               </list>
             </div>
